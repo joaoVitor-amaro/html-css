@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color: red;
+        }
+        a:visited {
+            color: darkred;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a::before {
+            content: " ->";
+        }
+
+        a::after {
+            content: " <-";
+            text-decoration: none;
+            font-weight: normal;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://ge.globo.com/sp/santos-e-regiao/futebol/times/santos/" target="_blank" rel="external">Notícias do Santos</a></li>
+        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements" target="_blank" rel="external">Pseudo-elementos</a></li>
+    </ul>
+</body>
+</html>
