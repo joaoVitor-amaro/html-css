@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            resize: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastrp.php" method="post" autocomplete="">
+        <p>
+            <label for="iestado">Estado</label>
+            <select name="estado" id="iestado" required>
+                <option value="" disabled selected>---Escolha---</option>
+                <optgroup label="Nordeste">
+                    <option value="PB">Paraíba</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+                <optgroup label="Sudeste">
+                    <option value="Rj">Rio de Janeiro</option>
+                    <option value="São Paulo">São Paulo</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="profi" id="iprof" list="lista_profissao">
+            <datalist id="lista_profissao">
+                <option value="Adm" >Administrador</option>
+                <option value="DEV">Desenvolvedor</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="imsg">Mensagem</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Mensagem" ></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
