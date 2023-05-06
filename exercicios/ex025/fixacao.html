@@ -5,11 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: lightgreen;
+            padding: 0px;
+            margin: 0px;
+            
+        }
+        section {
+            margin: auto;
+            background-color: white;
+            max-width: 1000px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Fixação do assunto de formulários</h1>
-    <form action="cadastrp.php" method="post">
-        
-    </form>
+    <section>
+            <h1>Formulário de Contato</h1>
+            <form action="joao.amaro@academico.ifpb.edu.br" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Identificação do Usuário</legend>
+                <p>
+                    <label for="inome">Nome:</label>
+                    <input type="text" name="nome" id="inome" placeholder="Nome completo" maxlength="40" autocomplete="name" required size="20">
+                </p>
+                <p>
+                    <label for="ipwd">Senha:</label>
+                    <input type="password" name="pwd" id="ipwd" required size="8" placeholder="8 digítos">
+                </p>
+                <p>
+                    <label for="iemail">E-mail:</label>
+                    <input type="email" name="email" id="iemail" autocomplete="email" size="20" placeholder="Email" required>
+                </p>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <input type="radio" name="sexo" id="imas" checked>
+                    <label for="imas">Masculino</label> <br>
+                    <input type="radio" name="sexo" id="ifem">
+                    <label for="ifem">Feminino</label>    
+                </fieldset>
+                <p>
+                    <label for="idate_nasce">Data de Nascimento</label>
+                    <input type="date" name="data_nas" id="idate_nasce" required>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Endereço</legend>
+                <p>
+                    <label for="irua">Logradouro:</label>
+                    <input type="text" name="rua" id="irua" placeholder="Rua, Av, Trav" maxlength="40" required>
+                </p>
+                <p>
+                    <label for="inumber">Número</label>
+                    <input type="number" name="number" id="inumber" min="1" max="999" required>
+                </p>
+                <p>
+                    <label for="iestado">Estado:</label>
+                    <select name="estado" id="iestado" required>
+                        <option value="" disabled selected>---Escolha---</option>
+                        <optgroup label="Região Nordeste">
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                        </optgroup>
+                        <optgroup label="Região Sudeste">
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <label for="icidade">Cidade:</label>
+                    <input type="text" name="cidade" id="icidade" list="lista_cidade" required>
+                    <datalist id="lista_cidade">
+                        <option value="João Pessoa">Paraíba</option>
+                        <option value="Natal">Rio Grande do Norte</option>
+                        <option value="Recife">Pernambuco</option>
+                        <option value="Santos">São Paulo</option>
+                        <option value="Niterói">Rio de Janeiro</option>
+                        <option value="Belo Horizonte">Minas Gerais</option>
+                    </datalist>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Mensagem</legend>
+                <p>
+                    <label for="igdu">Grau de Urgência</label>
+                    <input type="range" name="urgencia" id="idg" min="0" max="10" value="5">
+                </p>
+                <p>
+                    <label for="imsg">Mensagem</label> <br>
+                    <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Sua Mensagem" style="resize: none;"></textarea>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Quero um Google Glass</legend>
+                <p>
+                    <input type="checkbox" name="tped" id="cped" checked>
+                    <label for="iped">Gostaria de adquirir um Google Glass quando disponívelCor</label>
+                </p>
+                <p>
+                    <label for="icor">Cor</label>
+                    <input type="color" name="cor" id="icor" value="#0000ff">
+                </p>
+            </fieldset>
+            <p><input type="submit" value="Enviar"></p>
+            </form>
+    </section>
 </body>
 </html>
