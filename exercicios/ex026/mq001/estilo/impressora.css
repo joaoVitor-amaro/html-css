@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* Estilos para impressoras*/
+
+* {
+    padding: 10px;
+    margin: 10px;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+nav {
+    display: none;
+}
+
+article {
+    width: 100%;
+}
+
+article::after {
+    content: "08/05/2023";
+}
