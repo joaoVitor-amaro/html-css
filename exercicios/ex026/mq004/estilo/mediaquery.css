@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/* Todas as demais midias */
+@media print {
+    body {
+        text-shadow: none;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    h1::before {
+        content: 'Impressora';
+    }
+
+    main {
+        border: 2px solid black;
+        border-radius: 20px;
+        width: 90vw;
+    }
+    main::after {
+        content: "Impressão feita durante o curso de HTML5 e CSS3 no Curso em Vídeo ";
+        text-decoration: overline;
+        font-size: .5em;
+    }
+    img#print {
+        display: block;
+    }
+
+    img#pc, img#tablet, img#tv, img#phone {
+        display: none;
+    } 
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url(../image/back-tablet.jpg);
+    }
+    h1::before {
+        content: 'Tablet';
+    }
+
+    img#tablet {
+        display: block;
+    }
+
+    img#pc, img#print, img#tv, img#phone {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: url(../image/back-pc.jpg);
+    }
+    h1::before {
+        content: 'Desktop';
+    }
+
+    img#pc {
+        display: block;
+    }
+
+    img#tablet, img#print, img#tv, img#phone {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(../image/back-tv.jpg);
+    }
+
+    
+    h1::before {
+        content: 'Telas grandes';
+    }
+    img#tv {
+        display: block;
+    }
+
+    img#tablet, img#print, img#pc, img#phone {
+        display: none;
+    }
+}
