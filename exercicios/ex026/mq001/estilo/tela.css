@@ -17,5 +17,17 @@ header {
 
 header > h1 {
     text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10px;
+}
+
+nav ul > li {
+    display: inline-block;
+    background-color: gray;
+    padding: 10px;
 }
 

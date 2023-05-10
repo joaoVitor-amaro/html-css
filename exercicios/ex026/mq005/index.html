@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/media.css">
+</head>
+<body onresize="tamanho_tela()">
+    <header>
+        <h1>Meu site</h1>
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <nav id="itens">
+            <ul>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Testanto Media query</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni ad blanditiis, facere suscipit vel consequuntur debitis officiis sit ea dolore quidem, vitae eligendi sapiente error? Repellendus, ipsum aliquam odio corporis provident aperiam officiis? Dolores perspiciatis dolorum ad rem unde?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit rerum, qui quo et eligendi quasi. Numquam quia veniam tenetur soluta, ipsa officia repellat consequuntur voluptas corrupti cum aut necessitatibus minus rem rerum ea adipisci accusamus nihil odio maiores dolorum quam?</p>
+        </article>
+    </main>
+    <script>
+        function tamanho_tela() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block';
+            } else {
+                itens.style.display = 'none';
+            }
+        }
+        function clickMenu() {
+            if (itens.style.display === 'none') {
+                itens.style.display = 'block';
+            } else {
+                itens.style.display = 'none';
+            } 
+        }
+    </script>
+</body>
+</html>
