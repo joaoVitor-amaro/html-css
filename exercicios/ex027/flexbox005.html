@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex-wrap</title>
+    <title>justify-content</title>
     <style>
         * {
             font-family: Arial, Helvetica, sans-serif;
@@ -13,12 +13,13 @@
             max-width: 500px;
             margin: auto;
             border: 1px solid black;
-            flex-wrap: wrap-reverse;
+            justify-content: space-evenly;
         }
 
         .item {
             margin: 5px;
             padding: 5px;
+            width: 100px;
             background-color: #447;
             color: #fff;
             text-align: center;
@@ -34,11 +35,15 @@
         }
 
         .horizontal {
-            flex-direction: row;
+            flex-direction: row-reverse;
         }
 
         .vertical {
             flex-direction: column;
+        }
+
+        .fluxo-horizontal-quebra {
+            flex-flow: row wrap;
         }
        
         p {
@@ -50,17 +55,9 @@
     </style>
 </head>
 <body>
-    <section class="container flexivel quebra horizontal vertical">
+    <section class="container flexivel horizontal quebra">
         <div class="item">CBF curso 1</div>
         <div class="item">CBF curso 2</div>
         <div class="item">CBF curso 3</div>
-        <div class="item">CBF curso 4</div>
-        <div class="item">CBF curso 5</div>
-        <div class="item">CBF curso 6</div>
-        <div class="item">CBF curso 7</div>
-        <div class="item">CBF curso 8</div>
-        <div class="item">CBF curso 9</div>
-        <div class="item">CBF curso 10</div>
-    </section>
 </body>
 </html>
