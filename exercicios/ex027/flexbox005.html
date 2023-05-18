@@ -11,15 +11,19 @@
         }
         .container {
             max-width: 500px;
+           
             margin: auto;
             border: 1px solid black;
-            justify-content: space-evenly;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
         }
 
         .item {
             margin: 5px;
             padding: 5px;
             width: 100px;
+            height: 20px;
             background-color: #447;
             color: #fff;
             text-align: center;
@@ -55,7 +59,7 @@
     </style>
 </head>
 <body>
-    <section class="container flexivel horizontal quebra">
+    <section class="container ">
         <div class="item">CBF curso 1</div>
         <div class="item">CBF curso 2</div>
         <div class="item">CBF curso 3</div>
